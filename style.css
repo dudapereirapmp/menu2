@@ -21,7 +21,7 @@ nav li a{
 }
 
 nav li a:hover{
-    background-color: red;
+    background-color: rgb(240, 182, 23);
 }
 
 .dropdown-menu{
