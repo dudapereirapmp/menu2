@@ -1,6 +1,8 @@
 /* Variáveis CSS para cores e fontes */
 :root {
-    --primary-color: #ff6f61;
+    
+        --cor-fundo:#000000
+    --primary-color: #c5871c;
     --secondary-color: #333;
     --background-color: #f9f9f9;
     --text-color: #666;
