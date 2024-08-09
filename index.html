@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella burguer</title>
+    <title>Lanchonete Delícia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Bella burguer</h1>
+        <div class="header-content container">
+            <h1>Lanchonete Delícia</h1>
             <nav>
                 <a href="#menu">Menu</a>
                 <a href="#pedidos">Fazer Pedido</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
+
+    <section id="hero" class="container">
+        <div class="hero-content">
+            <h2>Bem-vindo à Lanchonete Delícia!</h2>
+            <p>Descubra o nosso menu e faça seu pedido online com facilidade.</p>
+            <a href="#pedidos" class="btn-primary">Faça Seu Pedido</a>
+        </div>
+    </section>
 
     <main>
         <section id="menu" class="container">
@@ -23,15 +32,19 @@
             <div class="menu-grid">
                 <div class="menu-item">
                     <img src="burguer.jpg" alt="Burguer Clássico">
-                    <h3>Burguer Clássico</h3>
-                    <p>Um delicioso burguer com carne suculenta, queijo e molho especial.</p>
-                    <span>R$ 15,00</span>
+                    <div class="menu-details">
+                        <h3>Burguer Clássico</h3>
+                        <p>Um delicioso burguer com carne suculenta, queijo e molho especial.</p>
+                        <span>R$ 15,00</span>
+                    </div>
                 </div>
                 <div class="menu-item">
                     <img src="batata.jpg" alt="Batata Frita">
-                    <h3>Batata Frita</h3>
-                    <p>Batatas crocantes e temperadas.</p>
-                    <span>R$ 8,00</span>
+                    <div class="menu-details">
+                        <h3>Batata Frita</h3>
+                        <p>Batatas crocantes e temperadas.</p>
+                        <span>R$ 8,00</span>
+                    </div>
                 </div>
                 <!-- Adicione mais itens do menu aqui -->
             </div>
@@ -41,7 +54,7 @@
             <h2>Faça Seu Pedido</h2>
             <form id="order-form">
                 <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required>
 
                 <label for="item">Escolha o Item:</label>
                 <select id="item" name="item" required>
@@ -52,10 +65,17 @@
                 </select>
 
                 <label for="quantity">Quantidade:</label>
-                <input type="number" id="quantity" name="quantity" min="1" required>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantidade" required>
 
-                <button type="submit">Enviar Pedido</button>
+                <button type="submit" class="btn-primary">Enviar Pedido</button>
             </form>
+        </section>
+
+        <section id="contato" class="container">
+            <h2>Contato</h2>
+            <p>Para dúvidas e mais informações, entre em contato conosco!</p>
+            <p>Email: contato@lanchonetedelicia.com</p>
+            <p>Telefone: (11) 1234-5678</p>
         </section>
     </main>
 
