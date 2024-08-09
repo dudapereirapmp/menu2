@@ -8,20 +8,22 @@
 </head>
 <body>
     <header>
-        <div class="header-content container">
+        <div class="container header-content">
             <h1>Lanchonete Delícia</h1>
             <nav>
+                <a href="#hero">Início</a>
                 <a href="#menu">Menu</a>
                 <a href="#pedidos">Fazer Pedido</a>
+                <a href="#carrinho">Carrinho</a>
                 <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
 
-    <section id="hero" class="container">
-        <div class="hero-content">
+    <section id="hero">
+        <div class="hero-content container">
             <h2>Bem-vindo à Lanchonete Delícia!</h2>
-            <p>Descubra o nosso menu e faça seu pedido online com facilidade.</p>
+            <p>Experimente o melhor do nosso cardápio e faça seu pedido online com facilidade.</p>
             <a href="#pedidos" class="btn-primary">Faça Seu Pedido</a>
         </div>
     </section>
@@ -30,20 +32,22 @@
         <section id="menu" class="container">
             <h2>Menu</h2>
             <div class="menu-grid">
-                <div class="menu-item">
+                <div class="menu-item" data-name="Burguer Clássico" data-price="15.00">
                     <img src="burguer.jpg" alt="Burguer Clássico">
                     <div class="menu-details">
                         <h3>Burguer Clássico</h3>
                         <p>Um delicioso burguer com carne suculenta, queijo e molho especial.</p>
                         <span>R$ 15,00</span>
+                        <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" data-name="Batata Frita" data-price="8.00">
                     <img src="batata.jpg" alt="Batata Frita">
                     <div class="menu-details">
                         <h3>Batata Frita</h3>
                         <p>Batatas crocantes e temperadas.</p>
                         <span>R$ 8,00</span>
+                        <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
                     </div>
                 </div>
                 <!-- Adicione mais itens do menu aqui -->
@@ -53,29 +57,33 @@
         <section id="pedidos" class="container">
             <h2>Faça Seu Pedido</h2>
             <form id="order-form">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
 
-                <label for="item">Escolha o Item:</label>
-                <select id="item" name="item" required>
-                    <option value="" disabled selected>Selecione um item</option>
-                    <option value="burguer">Burguer Clássico</option>
-                    <option value="batata">Batata Frita</option>
-                    <!-- Adicione mais opções aqui -->
-                </select>
-
-                <label for="quantity">Quantidade:</label>
-                <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantidade" required>
+                <div class="form-group">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantidade" required>
+                </div>
 
                 <button type="submit" class="btn-primary">Enviar Pedido</button>
             </form>
         </section>
 
+        <section id="carrinho" class="container">
+            <h2>Carrinho</h2>
+            <div id="cart-items">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <button id="checkout" class="btn-primary">Finalizar Pedido</button>
+        </section>
+
         <section id="contato" class="container">
             <h2>Contato</h2>
             <p>Para dúvidas e mais informações, entre em contato conosco!</p>
-            <p>Email: contato@lanchonetedelicia.com</p>
-            <p>Telefone: (11) 1234-5678</p>
+            <p>Email: <a href="mailto:contato@lanchonetedelicia.com">contato@lanchonetedelicia.com</a></p>
+            <p>Telefone: <a href="tel:+1112345678">(11) 1234-5678</a></p>
         </section>
     </main>
 
