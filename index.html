@@ -1,113 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio Bella burguer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #000000;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 1em;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #000000;
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5em 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .order-form {
-            margin-top: 2em;
-        }
-        .order-form label {
-            display: block;
-            margin-bottom: 0.5em;
-            color: #333;
-        }
-        .order-form input, .order-form select {
-            width: 100%;
-            padding: 0.5em;
-            margin-bottom: 1em;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .order-form button {
-            background-color: #000000;
-            color: white;
-            padding: 0.5em 2em;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .order-form button:hover {
-            background-color: #000000;
-        }
-    </style>
+    <title>Lanchonete Delícia</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Bella burguer</h1>
+        <div class="container">
+            <h1>Lanchonete Delícia</h1>
+            <nav>
+                <a href="#menu">Menu</a>
+                <a href="#pedidos">Fazer Pedido</a>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <h1>Cardápio</h1>
-        <div class="menu-item">
-             
-            <span>Hambúrguer</span><img src="bella.png" height="5%" width="3%"></a>
-            <span>R$ 10,00</span>
+
+    <main>
+        <section id="menu" class="container">
+            <h2>Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="burguer.jpg" alt="Burguer Clássico">
+                    <h3>Burguer Clássico</h3>
+                    <p>Um delicioso burguer com carne suculenta, queijo e molho especial.</p>
+                    <span>R$ 15,00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="batata.jpg" alt="Batata Frita">
+                    <h3>Batata Frita</h3>
+                    <p>Batatas crocantes e temperadas.</p>
+                    <span>R$ 8,00</span>
+                </div>
+                <!-- Adicione mais itens do menu aqui -->
+            </div>
+        </section>
+
+        <section id="pedidos" class="container">
+            <h2>Faça Seu Pedido</h2>
+            <form id="order-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="item">Escolha o Item:</label>
+                <select id="item" name="item" required>
+                    <option value="" disabled selected>Selecione um item</option>
+                    <option value="burguer">Burguer Clássico</option>
+                    <option value="batata">Batata Frita</option>
+                    <!-- Adicione mais opções aqui -->
+                </select>
+
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lanchonete Delícia. Todos os direitos reservados.</p>
         </div>
-        <div class="menu-item">
-            <span>Cheeseburger</span>
-            <span>R$ 12,00</span>
-        </div>
-        <div class="menu-item">
-            <span>Batata Frita</span>
-            <span>R$ 8,00</span>
-        </div>
-        <div class="menu-item">
-            <span>Refrigerante</span>
-            <span>R$ 5,00</span>
-        </div>
-        
-        <h2>Faça seu pedido</h2>
-        <form class="order-form" action="#" method="post">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="item">Item do Cardápio</label>
-            <select id="item" name="item" required>
-                <option value="hamburger">Hambúrguer - R$ 10,00</option>
-                <option value="cheeseburger">Cheeseburger - R$ 12,00</option>
-                <option value="batata">Batata Frita - R$ 8,00</option>
-                <option value="refrigerante">Refrigerante - R$ 5,00</option>
-            </select>
-            
-            <label for="quantity">Quantidade</label>
-            <input type="number" id="quantity" name="quantity" min="1" required>
-            
-            <label for="address">Endereço de Entrega</label>
-            <input type="text" id="address" name="address" required>
-            
-            <button type="submit">Enviar Pedido</button>
-        </form>
-    </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
-</html
+</html>
