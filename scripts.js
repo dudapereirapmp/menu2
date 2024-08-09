@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItems = document.getElementById('cart-items');
-    const cart = [];
 
     // Adicionar itens ao carrinho
     document.querySelectorAll('.btn-add-to-cart').forEach(button => {
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 cart.push(item);
             }
 
-            // Atualizar visualização do carrinho
-            updateCart();
+            // Salvar carrinho no localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
         });
     });
 
@@ -47,20 +47,23 @@ document.addEventListener('DOMContentLoaded', function () {
         cartItems.appendChild(ul);
     }
 
+    updateCart();
+
     // Finalizar pedido
-    document.getElementById('checkout').addEventListener('click', function () {
+    document.getElementById('checkout')?.addEventListener('click', function () {
         if (cart.length === 0) {
             alert('Seu carrinho está vazio.');
             return;
         }
 
         alert('Pedido finalizado com sucesso!');
-        cart.length = 0; // Limpar o carrinho
+        localStorage.removeItem('cart'); // Limpar o carrinho no localStorage
+        cart.length = 0; // Limpar o carrinho local
         updateCart();
     });
 
     // Formulário de pedido
-    document.getElementById('order-form').addEventListener('submit', function (event) {
+    document.getElementById('order-form')?.addEventListener('submit', function (event) {
         event.preventDefault();
         const name = document.getElementById('name').value;
         const quantity = parseInt(document.getElementById('quantity').value, 10);
@@ -68,8 +71,3 @@ document.addEventListener('DOMContentLoaded', function () {
         if (name && quantity > 0) {
             alert(`Pedido recebido! Nome: ${name}, Quantidade: ${quantity}`);
             // Aqui você pode adicionar código para enviar os dados para um servidor, por exemplo.
-        } else {
-            alert('Por favor, preencha todos os campos.');
-        }
-    });
-});

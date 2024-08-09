@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete Delícia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Lanchonete Delícia</h1>
+            <nav>
+                <a href="#hero">Início</a>
+                <a href="#menu">Menu</a>
+                <a href="#pedidos">Fazer Pedido</a>
+                <a href="cart.html">Carrinho</a> <!-- Redireciona para a nova página do carrinho -->
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content container">
+            <h2>Bem-vindo à Lanchonete Delícia!</h2>
+            <p>Experimente o melhor do nosso cardápio e faça seu pedido online com facilidade.</p>
+            <a href="#pedidos" class="btn-primary">Faça Seu Pedido</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="menu" class="container">
+            <h2>Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-name="Burguer Clássico" data-price="15.00">
+                    <img src="burguer.jpg" alt="Burguer Clássico">
+                    <div class="menu-details">
+                        <h3>Burguer Clássico</h3>
+                        <p>Um delicioso burguer com carne suculenta, queijo e molho especial.</p>
+                        <span>R$ 15,00</span>
+                        <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-name="Batata Frita" data-price="8.00">
+                    <img src="batata.jpg" alt="Batata Frita">
+                    <div class="menu-details">
+                        <h3>Batata Frita</h3>
+                        <p>Batatas crocantes e temperadas.</p>
+                        <span>R$ 8,00</span>
+                        <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <!-- Adicione mais itens do menu aqui -->
+            </div>
+        </section>
+
+        <section id="pedidos" class="container">
+            <h2>Faça Seu Pedido</h2>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantidade" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar Pedido</button>
+            </form>
+        </section>
+
+        <section id="contato" class="container">
+            <h2>Contato</h2>
+            <p>Para dúvidas e mais informações, entre em contato conosco!</p>
+            <p>Email: <a href="mailto:contato@lanchonetedelicia.com">contato@lanchonetedelicia.com</a></p>
+            <p>Telefone: <a href="tel:+1112345678">(11) 1234-5678</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lanchonete Delícia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
