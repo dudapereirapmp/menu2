@@ -43,6 +43,7 @@
             padding: 10px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
         .menu-item img {
             width: 100px;
@@ -53,6 +54,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .add-to-cart {
+            background-color: #f5d02f;
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .cart {
+            background-color: #222;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
         }
 
         /* CSS Responsivo */
@@ -77,6 +92,7 @@
         <a href="#galeria">Galeria</a>
         <a href="#contato">Contato</a>
         <a href="#pedidos">Fazer Pedido</a>
+        <a href="#carrinho">Carrinho (<span id="cart-count">0</span>)</a>
     </nav>
 </header>
 
@@ -95,6 +111,7 @@
                 <p>Um delicioso hambúrguer com queijo, alface, tomate e nosso molho especial.</p>
                 <p>Preço: R$ 15,00</p>
             </div>
+            <button class="add-to-cart" onclick="addToCart('X-Burguer', 15)">Adicionar ao Carrinho</button>
         </div>
         <div class="menu-item">
             <img src="https://via.placeholder.com/100" alt="Batata Frita">
@@ -103,6 +120,7 @@
                 <p>Batatas crocantes, servidas com molho de maionese.</p>
                 <p>Preço: R$ 10,00</p>
             </div>
+            <button class="add-to-cart" onclick="addToCart('Batata Frita', 10)">Adicionar ao Carrinho</button>
         </div>
         <div class="menu-item">
             <img src="https://via.placeholder.com/100" alt="Refrigerante">
@@ -111,6 +129,7 @@
                 <p>Escolha entre uma variedade de refrigerantes gelados.</p>
                 <p>Preço: R$ 5,00</p>
             </div>
+            <button class="add-to-cart" onclick="addToCart('Refrigerante', 5)">Adicionar ao Carrinho</button>
         </div>
         <div class="menu-item">
             <img src="https://via.placeholder.com/100" alt="Sanduíche Natural">
@@ -119,6 +138,7 @@
                 <p>Sanduíche saudável com frango grelhado, salada e molho à base de iogurte.</p>
                 <p>Preço: R$ 12,00</p>
             </div>
+            <button class="add-to-cart" onclick="addToCart('Sanduíche Natural', 12)">Adicionar ao Carrinho</button>
         </div>
         <div class="menu-item">
             <img src="https://via.placeholder.com/100" alt="Milkshake">
@@ -127,6 +147,7 @@
                 <p>Um cremoso milkshake de chocolate ou morango.</p>
                 <p>Preço: R$ 8,00</p>
             </div>
+            <button class="add-to-cart" onclick="addToCart('Milkshake', 8)">Adicionar ao Carrinho</button>
         </div>
         <div class="menu-item">
             <img src="https://via.placeholder.com/100" alt="Pizza Individual">
@@ -135,6 +156,7 @@
                 <p>Pizza individual com diversos sabores à sua escolha.</p>
                 <p>Preço: R$ 20,00</p>
             </div>
+            <button class="add-to-cart" onclick="addToCart('Pizza Individual', 20)">Adicionar ao Carrinho</button>
         </div>
     </div>
 </section>
@@ -182,10 +204,22 @@
     </form>
 </section>
 
+<section id="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <div class="cart" id="cart-items">
+        <p>Nenhum item no carrinho.</p>
+    </div>
+</section>
+
 <footer>
     <p>&copy; 2024 Lanchonete Delícias da Esquina. Todos os direitos reservados.</p>
 </footer>
 
-</body>
-</html>
+<script>
+    let cart = [];
 
+    function addToCart(itemName, itemPrice) {
+        cart.push({ name: itemName, price: itemPrice });
+        document.getElementById
+
+    }
