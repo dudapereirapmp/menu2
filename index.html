@@ -39,34 +39,30 @@
         .menu-item {
             background-color: #222;
             border: 1px solid #f5d02f;
-            margin: 10px;
-            padding: 10px;
-            width: calc(33% - 40px);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-            display: inline-block;
-            vertical-align: top;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
             margin: 10px 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .menu-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 15px;
         }
         .flex-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* CSS Responsivo */
         @media (max-width: 768px) {
             .menu-item {
-                width: calc(50% - 40px);
+                flex-direction: column;
+                align-items: flex-start;
             }
-        }
-
-        @media (max-width: 480px) {
-            .menu-item {
-                width: 100%;
+            .menu-item img {
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -93,34 +89,52 @@
     <h2>Menu</h2>
     <div class="flex-container">
         <div class="menu-item">
-            <h3>X-Burguer</h3>
-            <p>Um delicioso hambúrguer com queijo, alface, tomate e nosso molho especial.</p>
-            <p>Preço: R$ 15,00</p>
+            <img src="https://via.placeholder.com/100" alt="X-Burguer">
+            <div>
+                <h3>X-Burguer</h3>
+                <p>Um delicioso hambúrguer com queijo, alface, tomate e nosso molho especial.</p>
+                <p>Preço: R$ 15,00</p>
+            </div>
         </div>
         <div class="menu-item">
-            <h3>Batata Frita</h3>
-            <p>Batatas crocantes, servidas com molho de maionese.</p>
-            <p>Preço: R$ 10,00</p>
+            <img src="https://via.placeholder.com/100" alt="Batata Frita">
+            <div>
+                <h3>Batata Frita</h3>
+                <p>Batatas crocantes, servidas com molho de maionese.</p>
+                <p>Preço: R$ 10,00</p>
+            </div>
         </div>
         <div class="menu-item">
-            <h3>Refrigerante</h3>
-            <p>Escolha entre uma variedade de refrigerantes gelados.</p>
-            <p>Preço: R$ 5,00</p>
+            <img src="https://via.placeholder.com/100" alt="Refrigerante">
+            <div>
+                <h3>Refrigerante</h3>
+                <p>Escolha entre uma variedade de refrigerantes gelados.</p>
+                <p>Preço: R$ 5,00</p>
+            </div>
         </div>
         <div class="menu-item">
-            <h3>Sanduíche Natural</h3>
-            <p>Sanduíche saudável com frango grelhado, salada e molho à base de iogurte.</p>
-            <p>Preço: R$ 12,00</p>
+            <img src="https://via.placeholder.com/100" alt="Sanduíche Natural">
+            <div>
+                <h3>Sanduíche Natural</h3>
+                <p>Sanduíche saudável com frango grelhado, salada e molho à base de iogurte.</p>
+                <p>Preço: R$ 12,00</p>
+            </div>
         </div>
         <div class="menu-item">
-            <h3>Milkshake</h3>
-            <p>Um cremoso milkshake de chocolate ou morango.</p>
-            <p>Preço: R$ 8,00</p>
+            <img src="https://via.placeholder.com/100" alt="Milkshake">
+            <div>
+                <h3>Milkshake</h3>
+                <p>Um cremoso milkshake de chocolate ou morango.</p>
+                <p>Preço: R$ 8,00</p>
+            </div>
         </div>
         <div class="menu-item">
-            <h3>Pizza Individual</h3>
-            <p>Pizza individual com diversos sabores à sua escolha.</p>
-            <p>Preço: R$ 20,00</p>
+            <img src="https://via.placeholder.com/100" alt="Pizza Individual">
+            <div>
+                <h3>Pizza Individual</h3>
+                <p>Pizza individual com diversos sabores à sua escolha.</p>
+                <p>Preço: R$ 20,00</p>
+            </div>
         </div>
     </div>
 </section>
@@ -128,9 +142,9 @@
 <section id="galeria">
     <h2>Galeria</h2>
     <div class="gallery">
-        <img src="https://via.placeholder.com/300x200" alt="Lanche 1">
-        <img src="https://via.placeholder.com/300x200" alt="Lanche 2">
-        <img src="https://via.placeholder.com/300x200" alt="Lanche 3">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem de um lanche">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem de um lanche">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem de um lanche">
     </div>
 </section>
 
@@ -174,3 +188,4 @@
 
 </body>
 </html>
+
