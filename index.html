@@ -3,105 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bella burguer</title>
-    <img src="bella.png" height="15%" width="100%"></a>
-            
-                </a>
-            </a>
-        </footer>
-    <link rel="stylesheet" href="styles.css">
+    <title>Lanchonete Delícias da Esquina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #f5d02f;
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #f5d02f;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #111;
+        }
+        .menu-item {
+            background-color: #222;
+            border: 1px solid #f5d02f;
+            margin: 10px;
+            padding: 10px;
+            width: calc(33% - 40px);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            vertical-align: top;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <h1>bella burguer</h1>
-            <nav>
-                <a href="#hero">Início</a>
-                <a href="#menu">Menu</a>
-                <a href="#pedidos">Fazer Pedido</a>
-                <a href="#carrinho">Carrinho</a>
-                <a href="#contato">Contato</a>
-            </nav>
+
+<header>
+    <h1>Lanchonete Delícias da Esquina</h1>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#menu">Menu</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Bem-vindo à Lanchonete Delícias da Esquina! Aqui, servimos as melhores opções de lanches, preparados com ingredientes frescos e de qualidade. Nossa missão é proporcionar uma experiência deliciosa e acolhedora a todos os nossos clientes.</p>
+</section>
+
+<section id="menu">
+    <h2>Menu</h2>
+    <div class="flex-container">
+        <div class="menu-item">
+            <h3>X-Burguer</h3>
+            <p>Um delicioso hambúrguer com queijo, alface, tomate e nosso molho especial.</p>
+            <p>Preço: R$ 15,00</p>
         </div>
-    </header>
-
-    <section id="hero">
-        <div class="hero-content container">
-            <h2>Bem-vindo à Bella burguer!</h2>
-            <p>Experimente o melhor do nosso cardápio e faça seu pedido online com facilidade.</p>
-            <a href="#pedidos" class="btn-primary">Faça Seu Pedido</a>
+        <div class="menu-item">
+            <h3>Batata Frita</h3>
+            <p>Batatas crocantes, servidas com molho de maionese.</p>
+            <p>Preço: R$ 10,00</p>
         </div>
-    </section>
-
-    <main>
-        <section id="menu" class="container">
-            <h2>Menu</h2>
-            <div class="menu-grid">
-                <div class="menu-item" data-name="Burguer Clássico" data-price="15.00">
-                    <img src="burguer.jpg" alt="Burguer Clássico">
-                    <div class="menu-details">
-                        <h3>Burger Clássico  </h3>
-                        <p>Burger artesanal 150g, queijo Cheddar, tomate, cebola roxa, picles, alface e maionese da casa.</p>
-                        <span>R$ 21,90</span>
-                          <h3>Burger fraldinha  </h3>
-                        <p>Super Burger Da Fraldinha da costela de 150g, queijo Cheddar, tomate, cebola roxa, picles, alface e maionese da casa.</p>
-                        <span>R$ 24,90</span>
-
-                        <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-                <div class="menu-item" data-name="Batata Frita" data-price="8.00">
-                    <img src="batata.jpg" alt="Batata Frita">
-                    <div class="menu-details">
-                        <h3>Batata Frita</h3>
-                        <p>Batatas crocantes e temperadas.</p>
-                        <span>R$ 8,00</span>
-                        <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-                <!-- Adicione mais itens do menu aqui -->
-            </div>
-        </section>
-
-        <section id="pedidos" class="container">
-            <h2>Faça Seu Pedido</h2>
-            <form id="order-form">
-                <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="quantity">Quantidade:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantidade" required>
-                </div>
-
-                <button type="submit" class="btn-primary">Enviar Pedido</button>
-            </form>
-        </section>
-
-        <section id="carrinho" class="container">
-            <h2>Carrinho</h2>
-            <div id="cart-items">
-                <p>Seu carrinho está vazio.</p>
-            </div>
-            <button id="checkout" class="btn-primary">Finalizar Pedido</button>
-        </section>
-
-        <section id="contato" class="container">
-            <h2>Contato</h2>
-            <p>Para dúvidas e mais informações, entre em contato conosco!</p>
-            <p>Email: <a href="mailto:contato@lanchonetedelicia.com">contato@lanchonetedelicia.com</a></p>
-            <p>Telefone: <a href="tel:+1112345678">(11) 1234-5678</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Lanchonete Delícia. Todos os direitos reservados.</p>
+        <div class="menu-item">
+            <h3>Refrigerante</h3>
+            <p>Escolha entre uma variedade de refrigerantes gelados.</p>
+            <p>Preço: R$ 5,00</p>
         </div>
-    </footer>
+        <div class="menu-item">
+            <h3>Sanduíche Natural</h3>
+            <p>Sanduíche saudável com frango grelhado, salada e molho à base de iogurte.</p>
+            <p>Preço: R$ 12,00</p>
+        </div>
+        <div class="menu-item">
+            <h3>Milkshake</h3>
+            <p>Um cremoso milkshake de chocolate ou morango.</p>
+            <p>Preço: R$ 8,00</p>
+        </div>
+        <div class="menu-item">
+            <h3>Pizza Individual</h3>
+            <p>Pizza individual com diversos sabores à sua escolha.</p>
+            <p>Preço: R$ 20,00</p>
+        </div>
+    </div>
+</section>
 
-    <script src="scripts.js"></script>
+<section id="galeria">
+    <h2>Galeria</h2>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem de um lanche">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem de um lanche">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem de um lanche">
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+    <p>Email: contato@deliciasdaesquina.com.br</p>
+    <p>Telefone: (11) 1234-5678</p>
+    <p>Endereço: Rua das Flores, 123, Centro, Cidade - Estado</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lanchonete Delícias da Esquina. Todos os direitos reservados.</p>
+</footer>
+
 </body>
 </html>
